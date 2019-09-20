@@ -58,6 +58,34 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MOSI_Pin GPIO_PIN_2
+#define MOSI_GPIO_Port GPIOB
+#define CS_SET_Pin GPIO_PIN_8
+#define CS_SET_GPIO_Port GPIOC
+#define DC_SET_Pin GPIO_PIN_9
+#define DC_SET_GPIO_Port GPIOC
+#define SCK_Pin GPIO_PIN_10
+#define SCK_GPIO_Port GPIOC
+#define MISO_Pin GPIO_PIN_11
+#define MISO_GPIO_Port GPIOC
+#define RST_SET_Pin GPIO_PIN_12
+#define RST_SET_GPIO_Port GPIOC
+#define KEYy3_Pin GPIO_PIN_0
+#define KEYy3_GPIO_Port GPIOD
+#define KEYy2_Pin GPIO_PIN_1
+#define KEYy2_GPIO_Port GPIOD
+#define KEYy1_Pin GPIO_PIN_2
+#define KEYy1_GPIO_Port GPIOD
+#define KEYy0_Pin GPIO_PIN_3
+#define KEYy0_GPIO_Port GPIOD
+#define KEYx0_Pin GPIO_PIN_4
+#define KEYx0_GPIO_Port GPIOD
+#define KEYx1_Pin GPIO_PIN_5
+#define KEYx1_GPIO_Port GPIOD
+#define KEYx2_Pin GPIO_PIN_6
+#define KEYx2_GPIO_Port GPIOD
+#define KEYx3_Pin GPIO_PIN_7
+#define KEYx3_GPIO_Port GPIOD
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
