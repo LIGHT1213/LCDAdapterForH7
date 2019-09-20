@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "gui.h"
+#include "KeyPad.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,14 +93,16 @@ int main(void)
   MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
 	Lcd_Init();
-	Lcd_Clear(RED);
+	Lcd_Clear(WHITE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  Gui_DrawLine(0,0,100,100,WHITE);
+	  if(Key_scan()==1)
+		  Lcd_Clear(RED);
+	  //Gui_DrawLine(0,0,100,100,WHITE);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
