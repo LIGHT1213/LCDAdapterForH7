@@ -35,7 +35,7 @@ extern SPI_HandleTypeDef hspi3;
 /* USER CODE BEGIN Private defines */
 #define LCD_X_SIZE	        240
 #define LCD_Y_SIZE	        320
-//定义是否使用横屏 		0,不使�?.1,使用
+//定义是否使用横屏 		0,不使�??.1,使用
 #define USE_HORIZONTAL  		1
 #ifdef USE_HORIZONTAL
 #define X_MAX_PIXEL	        LCD_Y_SIZE
@@ -45,7 +45,7 @@ extern SPI_HandleTypeDef hspi3;
 #define Y_MAX_PIXEL	        LCD_Y_SIZE
 #endif
 
-#define RED			0xF800
+#define RED			0x0302
 #define GREEN		0x07E0
 #define BLUE 		0x001F
 #define WHITE		0xFFFF
@@ -55,12 +55,12 @@ extern SPI_HandleTypeDef hspi3;
 #define GRAY1   0x8410      //灰色1  00000 000000 00000
 #define GRAY2   0x4208      //灰色2  11111 111110 11111C
 
-//液晶控制口置1操作语句宏定�?
+//液晶控制口置1操作语句宏定�??
 #define	LCD_CS_SET  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
 #define	LCD_DC_SET  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
 #define	LCD_RST_SET  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_SET);
 
-//液晶控制口置0操作语句宏定�?
+//液晶控制口置0操作语句宏定�??
 #define	LCD_CS_CLR  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
 #define	LCD_DC_CLR  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
 #define	LCD_RST_CLR  	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET);
