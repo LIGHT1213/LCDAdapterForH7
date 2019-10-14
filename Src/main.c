@@ -29,6 +29,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "KeyPad.h"
+#include "MyMain.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,7 +50,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+extern uint32_t ImgIn[38400];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,6 +98,7 @@ int main(void)
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 	Lcd_Init();
+	HAL_UART_Receive_DMA(&huart4,ImgIn,38400);
 	Lcd_Clear(RED);
   /* USER CODE END 2 */
 
@@ -104,8 +106,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(Key_scan()==1)
-		  Lcd_Clear(RED);
+	  MyMain();
 	  //Gui_DrawLine(0,0,100,100,WHITE);
     /* USER CODE END WHILE */
 
